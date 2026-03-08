@@ -543,7 +543,7 @@ header {
 }
 
 /* 
-   Since we don't know if Tablet.png has a transparent screen, 
+   Since we don't know if Tablet.webp has a transparent screen, 
    placing the video *on top* is safer if we get the % right.
    If the frame is just a border, placing it *behind* is safer.
    Let's try placing video ON TOP (z-index 3) but assuming the image is the frame.
@@ -1876,7 +1876,7 @@ h1 {
 
 .video-frame-container {
     position: absolute;
-    /* Precise positioning based on Slide 26 .png proportions */
+    /* Precise positioning based on Slide 26 .webp proportions */
     top: 17%;
     left: 22.8%;
     width: 73.1%;
