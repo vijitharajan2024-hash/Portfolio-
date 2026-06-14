@@ -744,6 +744,21 @@
                     progressBar.style.width = "0%";
                 }
             }
+
+            // --- Preload Next Slides ---
+            for (let i = 1; i <= 2; i++) {
+                if (currentSlide - 1 + i < slides.length) {
+                    const nextSlide = slides[currentSlide - 1 + i];
+                    if (typeof nextSlide === "string") {
+                        new Image().src = nextSlide;
+                    } else if (typeof nextSlide === "object" && nextSlide.type === "interactive") {
+                        new Image().src = nextSlide.before;
+                        new Image().src = nextSlide.after;
+                    } else if (typeof nextSlide === "object" && nextSlide.type === "video-overlay") {
+                        new Image().src = nextSlide.bg;
+                    }
+                }
+            }
         }
 
         let sliderInitialized = false;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebP Converter</title>
+</head>
+<body>
+    <textarea id="input" style="width: 100%; height: 200px;" placeholder="Paste PNG Base64 here..."></textarea>
+    <button id="convertBtn">Convert to WebP</button>
+    <div id="status"></div>
+    <textarea id="output" style="width: 100%; height: 200px;" readonly></textarea>
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <script src="data.js"></script>
+    <script>
+        window.onload = function() {
+            if (typeof imgData !== 'undefined') {
+                document.getElementById('input').value = imgData;
+                document.getElementById('convertBtn').click();
+            }
+        };
+        document.getElementById('convertBtn').onclick = function() {
+            const input = document.getElementById('input').value.trim();
+            const status = document.getElementById('status');
+            const output = document.getElementById('output');
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            status.innerText = "Loading image...";
+            const img = new Image();
+            img.onload = function() {
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.drawImage(img, 0, 0);
+                status.innerText = "Converting...";
+                const webpData = canvas.toDataURL('image/webp', 0.8);
+                output.value = webpData;
+                status.innerText = "Done!";
+                console.log("CONVERSION_COMPLETE");
+            };
+            img.onerror = function() {
+                status.innerText = "Error loading image.";
+            };
+            if (input.startsWith('data:image')) {
+                img.src = input;
+            } else {
+                img.src = 'data:image/png;base64,' + input;
+            }
+        };
+    </script>
+</body>
+</html>
