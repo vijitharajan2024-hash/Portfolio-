@@ -1,11 +1,11 @@
 :root {
     --bg-color: #FFFBF1;
-    --heading-color: #265F56;
+    --heading-color: #174029;
     --text-color: #4A3B32;
     /* Dark brown */
     --font-heading: 'BritishEmpire', serif;
     --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-    --tag-border-color: #265F56;
+    --tag-border-color: #174029;
 }
 
 @font-face {
@@ -794,12 +794,12 @@ h1 {
     font-weight: 600;
     font-size: 1.1rem;
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(38, 95, 86, 0.2);
+    box-shadow: 0 4px 15px rgba(23, 64, 41, 0.2);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(38, 95, 86, 0.3);
+    box-shadow: 0 8px 25px rgba(23, 64, 41, 0.3);
     color: #fff;
 }
 
@@ -1285,7 +1285,7 @@ h1 {
 .project-card.sittersafe .project-tag {
     background-color: #E2FFE9;
     border: 1px solid #B0EBB4;
-    color: #265F56;
+    color: #174029;
     padding: 0.4rem 1.4rem;
     font-size: 0.85rem;
     border-radius: 100px;
@@ -1293,7 +1293,7 @@ h1 {
 }
 
 .project-card.sittersafe .project-tagline {
-    color: #265F56;
+    color: #174029;
     font-size: 1.45rem;
     line-height: 1.4;
     margin: 0;
@@ -1306,14 +1306,14 @@ h1 {
 }
 
 .project-card.sittersafe .stat-number {
-    color: #265F56;
+    color: #174029;
     font-size: 2rem;
     /* Reduced number size */
     font-weight: 600;
 }
 
 .project-card.sittersafe .stat-label {
-    color: #265F56;
+    color: #174029;
     font-size: 0.9rem;
     opacity: 0.8;
 }
@@ -1345,13 +1345,13 @@ h1 {
     align-items: center;
     justify-content: center;
     background-color: #C1FECA;
-    color: #265F56;
+    color: #174029;
     text-decoration: none;
     padding: 0.6rem 2.24rem;
     border-radius: 100px;
     font-weight: 600;
     font-size: 1rem;
-    border: 1px solid #265F56;
+    border: 1px solid #174029;
     transition: all 0.3s ease;
     margin: -4.5rem 0 0 0;
     /* Reduced space between numbers and CTA */
@@ -1366,7 +1366,7 @@ h1 {
 .project-card.sittersafe .sittersafe-cta:hover {
     background-color: #A7EFB5;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(38, 95, 86, 0.15);
+    box-shadow: 0 6px 15px rgba(23, 64, 41, 0.15);
 }
 
 @media (max-width: 1100px) {
@@ -2071,7 +2071,7 @@ h1 {
     top: 2rem;
     right: 2rem;
     font-size: 3rem;
-    color: #2D5A50;
+    color: #174029;
     cursor: pointer;
     z-index: 10001;
     transition: transform 0.3s ease;
@@ -2252,7 +2252,7 @@ h1 {
 .connect-btn {
     display: inline-block;
     padding: 13px 36px;
-    background-color: #2D5A50;
+    background-color: #174029;
     color: #fff !important;
     text-decoration: none;
     border-radius: 8px;
@@ -2266,7 +2266,7 @@ h1 {
 .connect-btn {
     display: inline-block;
     padding: 13px 36px;
-    background-color: #2D5A50;
+    background-color: #174029;
     color: #fff !important;
     text-decoration: none;
     border-radius: 8px;
@@ -2278,9 +2278,9 @@ h1 {
 }
 
 .connect-btn:hover {
-    background-color: #1a3630;
+    background-color: #102C1C;
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(45, 90, 80, 0.3);
+    box-shadow: 0 10px 25px rgba(23, 64, 41, 0.3);
 }
 
 /* Retired legacy rules */
